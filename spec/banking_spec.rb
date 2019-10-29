@@ -2,25 +2,27 @@ describe "BankAccount" do
 
   let(:avi) { BankAccount.new("Avi") }
 
-  describe "#initialize" do
-    it "can initialize a Bank Account" do
-      expect(avi).to be_a(BankAccount)
-    end
+  describe 'BankAccount' do
+    describe "#initialize" do
+      it "can initialize a Bank Account" do
+        expect(avi).to be_a(BankAccount)
+      end
 
-    it "initializes with a name" do
-      expect(avi.name).to eq("Avi")
-    end
+      it "initializes with a name" do
+        expect(avi.name).to eq("Avi")
+      end
 
-    it "always initializes with balance of 1000" do
-      expect(avi.balance).to eq(1000)
-    end
+      it "always initializes with balance of 1000" do
+        expect(avi.balance).to eq(1000)
+      end
 
-    it "always initializes with a status of 'open'" do
-      expect(avi.status).to eq("open")
-    end
+      it "always initializes with a status of 'open'" do
+        expect(avi.status).to eq("open")
+      end
 
-    it "can't change its name" do
-      expect { avi.name = "Bob" }.to raise_error(NoMethodError)
+      it "can't change its name" do
+        expect { avi.name = "Bob" }.to raise_error
+      end
     end
   end
 
@@ -57,3 +59,4 @@ describe "BankAccount" do
     end
   end
 end
+ 12  oo-banking-v-000/spec/spec_helper.rb 
